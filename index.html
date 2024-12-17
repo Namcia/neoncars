@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Cars - Komis Samochodowy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="banner.png" alt="Banner Neon Cars" class="banner">
+    </header>
+    <main>
+        <aside class="filters">
+            <h3>Filtry</h3>
+            <label for="classFilter">Klasa pojazdu:</label>
+            <select id="classFilter">
+                <option value="all">Wszystkie</option>
+                <option value="S">S</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+            <label for="typeFilter">Typ pojazdu:</label>
+            <select id="typeFilter">
+                <option value="all">Wszystkie</option>
+                <option value="Sport">Sport</option>
+                <option value="Off-road">Off-road</option>
+            </select>
+        </aside>
+        <section class="content">
+            <div class="controls">
+                <input type="text" id="searchBar" placeholder="Szukaj samochodu..." class="search-bar">
+                <label for="sortOrder">Sortowanie:</label>
+                <select id="sortOrder">
+                    <option value="asc">Cena rosnąco</option>
+                    <option value="desc">Cena malejąco</option>
+                </select>
+            </div>
+            <section class="car-list" id="carList">
+                <!-- Samochody będą dodawane dynamicznie -->
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Neon Cars. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Kolorystyka ogólna */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebedef; /* Jasnoszare tło */
+    color: #333; /* Standardowy kolor tekstu */
+}
+
+/* Nagłówek */
+header .banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #ff59c8; /* Pasek akcentu */
+}
+
+/* Główna sekcja */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Filtry */
+.filters {
+    flex: 0 0 200px;
+    background-color: #1b1f3b; /* Granatowy kolor */
+    color: #ffffff; /* Biały tekst */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filters h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #f8f9fa; /* Srebrny odcień */
+}
+
+.filters label {
+    font-size: 1em;
+    color: #d1d5db; /* Jaśniejszy odcień szarości */
+}
+
+.filters select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1em;
+}
+
+/* Główna treść */
+.content {
+    flex: 1;
+}
+
+/* Wyszukiwarka i sortowanie */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.controls .search-bar {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.controls label {
+    font-size: 1em;
+    color: #1b1f3b;
+}
+
+.controls select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1em;
+}
+
+/* Lista pojazdów */
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-item {
+    flex: 0 0 calc(33.333% - 20px); /* 3 karty w rzędzie */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+    border: 1px solid #ebedef; /* Drobne obramowanie */
+}
+
+.car-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Zdjęcia pojazdów */
+.car-item img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 400px;
+    display: block;
+    margin: 20px auto 0; /* Odstęp nad obrazem */
+    background-color: #f4f4f4;
+}
+
+/* Szczegóły pojazdu */
+.car-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.car-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1b1f3b; /* Granatowy */
+}
+
+.car-price {
+    font-size: 1.2em;
+    color: #007bff; /* Akcentowy niebieski */
+    margin-bottom: 5px;
+}
+
+.car-class,
+.car-type {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1b1f3b; /* Granatowy */
+    color: #f8f9fa; /* Srebrny tekst */
+    border-top: 5px solid #f32ab0; /* Pasek akcentu */
+}
