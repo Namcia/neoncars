@@ -3,6 +3,7 @@ const cars = [
     { name: "BF Injection", price: 45000, class: "B", type: "Off-road" },
     { name: "Dubsta 6x6", price: 180000, class: "A", type: "Off-road" },
     { name: "Entity MT", price: 1000000, class: "S", type: "Sport" },
+    { name: "Obey 10F", price: 2000000, class: "S", type: "Sport" },
 ];
 
 const carList = document.getElementById("carList");
