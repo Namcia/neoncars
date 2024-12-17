@@ -1,4 +1,4 @@
-/* Kolorystyka ogólna */
+/* Podstawowy styl */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -13,7 +13,7 @@ header .banner {
     height: auto;
     display: block;
     margin-bottom: 20px;
-    border-bottom: 5px solid #ff59c8; /* Pasek akcentu */
+    border-bottom: 5px solid #007bff;
 }
 
 /* Główna sekcja */
@@ -25,38 +25,39 @@ main {
 }
 
 /* Filtry */
+/* Filtry */
 .filters {
     flex: 0 0 200px;
-    background-color: #1b1f3b; /* Granatowy kolor */
-    color: #ffffff; /* Biały tekst */
+    background-color: #1b1f3b; /* Granatowy */
+    color: #ffffff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    max-height: 300px; /* Maksymalna wysokość */
+    overflow-y: auto; /* Przewijanie w pionie */
 }
 
 .filters h3 {
     font-size: 1.3em;
     margin-bottom: 15px;
-    color: #f8f9fa; /* Srebrny odcień */
 }
 
 .filters label {
     font-size: 1em;
-    color: #d1d5db; /* Jaśniejszy odcień szarości */
+    display: block;
+    margin-bottom: 5px;
 }
 
 .filters select {
-    display: block;
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f8f9fa;
     color: #333;
-    font-size: 1em;
 }
+
 
 /* Główna treść */
 .content {
@@ -70,6 +71,7 @@ main {
     align-items: center;
     margin-bottom: 20px;
     gap: 10px;
+    flex-wrap: wrap; /* Pozwala na zawijanie */
 }
 
 .controls .search-bar {
@@ -79,21 +81,6 @@ main {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f8f9fa;
-    color: #333;
-}
-
-.controls label {
-    font-size: 1em;
-    color: #1b1f3b;
-}
-
-.controls select {
-    padding: 8px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    background-color: #f8f9fa;
-    color: #333;
-    font-size: 1em;
 }
 
 /* Lista pojazdów */
@@ -104,14 +91,12 @@ main {
 }
 
 .car-item {
-    flex: 0 0 calc(33.333% - 20px); /* 3 karty w rzędzie */
+    flex: 0 0 calc(33.333% - 20px); /* 3 karty w rzędzie na dużych ekranach */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto;
-    border: 1px solid #ebedef; /* Drobne obramowanie */
 }
 
 .car-item:hover {
@@ -119,18 +104,14 @@ main {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Zdjęcia pojazdów */
 .car-item img {
     width: 100%;
     height: auto;
-    max-width: 600px;
-    max-height: 400px;
     display: block;
-    margin: 20px auto 0; /* Odstęp nad obrazem */
+    margin: 20px auto 0;
     background-color: #f4f4f4;
 }
 
-/* Szczegóły pojazdu */
 .car-details {
     padding: 15px;
     text-align: center;
@@ -140,12 +121,12 @@ main {
     font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #1b1f3b; /* Granatowy */
+    color: #1b1f3b;
 }
 
 .car-price {
     font-size: 1.2em;
-    color: #007bff; /* Akcentowy niebieski */
+    color: #007bff;
     margin-bottom: 5px;
 }
 
@@ -159,7 +140,45 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #1b1f3b; /* Granatowy */
-    color: #f8f9fa; /* Srebrny tekst */
-    border-top: 5px solid #f32ab0; /* Pasek akcentu */
+    background-color: #1b1f3b;
+    color: #f8f9fa;
+    border-top: 5px solid #007bff;
+}
+
+/* Media Queries - Responsywność */
+
+/* Dla tabletów i małych ekranów */
+@media (max-width: 1024px) {
+    .car-item {
+        flex: 0 0 calc(50% - 20px); /* 2 karty w rzędzie */
+    }
+}
+
+/* Dla telefonów */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Filtry idą na górę */
+    }
+
+    .filters {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .car-item {
+        flex: 0 0 100%; /* 1 karta na całą szerokość */
+    }
+}
+
+@media (max-width: 480px) {
+    .controls .search-bar,
+    .controls select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
