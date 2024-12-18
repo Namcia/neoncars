@@ -157,4 +157,45 @@ footer {
 
 /* Na tabletach */
 @media (max-width: 1024px) {
-    .car
+    .car-item {
+        flex: 0 0 calc(50% - 20px); /* 2 karty w rzędzie */
+    }
+}
+
+/* Na telefonach */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Przenieś filtry na górę */
+    }
+
+    .filters {
+        width: 100%; /* Na telefonach filtry zajmują pełną szerokość */
+        margin-bottom: 20px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .car-item {
+        flex: 0 0 calc(50% - 10px); /* 2 karty w rzędzie na małych ekranach */
+    }
+
+    .controls .search-bar,
+    .controls select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Dla bardzo małych ekranów */
+@media (max-width: 480px) {
+    header .banner {
+        width: 100%; /* Zapewnia pełne dopasowanie */
+        height: auto;
+    }
+
+    .car-item {
+        flex: 0 0 calc(50% - 10px); /* Nadal 2 karty w rzędzie */
+    }
+}
