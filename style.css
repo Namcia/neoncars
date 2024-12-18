@@ -10,19 +10,19 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ebedef;
-    color: #333;
-    overflow-x: hidden;
+    background-color: #ebedef; /* Jasnoszare tło */
+    color: #333; /* Kolor tekstu */
+    overflow-x: hidden; /* Zapobiega przewijaniu poziomemu */
 }
 
 /* Nagłówek i baner */
 header {
     width: 100%;
-    overflow: hidden; /* Ukryj ewentualne nadmiary */
+    overflow: hidden; /* Ukryj nadmiary */
 }
 
 header .banner {
-    width: 100%; /* Pełna szerokość */
+    width: 100%; /* Baner na całą szerokość */
     height: auto; /* Zachowaj proporcje obrazu */
     display: block;
 }
@@ -37,18 +37,111 @@ main {
 
 /* Filtry */
 .filters {
-    flex: 0 0 200px;
-    background-color: #1b1f3b;
-    color: #ffffff;
+    flex: 0 0 200px; /* Szerokość na większych ekranach */
+    background-color: #1b1f3b; /* Granatowy */
+    color: #ffffff; /* Biały tekst */
     padding: 15px;
     border-radius: 8px;
-    max-height: 300px;
-    overflow-y: auto;
+    max-height: 300px; /* Ograniczenie wysokości */
+    overflow-y: auto; /* Przewijanie w pionie */
 }
 
-/* Treść */
+/* Filtry - tytuł i pola */
+.filters h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.filters label {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filters select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Główna treść */
 .content {
+    flex: 1; /* Zajmuje resztę dostępnej przestrzeni */
+}
+
+/* Wyszukiwarka i sortowanie */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów */
+}
+
+.controls .search-bar {
     flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+/* Lista pojazdów */
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-item {
+    flex: 0 0 calc(33.333% - 20px); /* 3 karty w rzędzie na dużych ekranach */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.car-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #f4f4f4;
+}
+
+.car-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.car-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1b1f3b;
+}
+
+.car-price {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.car-class,
+.car-type {
+    font-size: 1em;
+    color: #666;
 }
 
 /* Stopka */
@@ -56,17 +149,12 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #1b1f3b;
-    color: #ffffff;
+    color: #f8f9fa;
+    border-top: 5px solid #007bff;
 }
 
 /* Responsywność - poprawki na małych ekranach */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column; /* Przenieś filtry na górę */
-    }
 
-    .filters {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
+/* Na tabletach */
+@media (max-width: 1024px) {
+    .car
