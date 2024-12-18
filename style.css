@@ -5,17 +5,17 @@ body {
     padding: 0;
     background-color: #ebedef; /* Jasnoszare tło */
     color: #333; /* Standardowy kolor tekstu */
+    overflow-x: hidden; /* Zapobiega przewijaniu poziomemu */
 }
 
-/* Nagłówek */
+/* Nagłówek i baner */
 header .banner {
-    width: 100vw; /* Rozciągnij na pełną szerokość ekranu */
+    width: 100%; /* Rozciągnij na pełną szerokość ekranu */
     height: auto; /* Zachowaj proporcje obrazu */
     display: block;
     margin: 0; /* Usuń marginesy */
     padding: 0;
     object-fit: cover; /* Wypełnia przestrzeń bez zniekształcenia */
-    
 }
 
 /* Główna sekcja */
@@ -27,9 +27,8 @@ main {
 }
 
 /* Filtry */
-/* Filtry */
 .filters {
-    flex: 0 0 200px;
+    flex: 0 0 200px; /* Stała szerokość bloku filtrów na większych ekranach */
     background-color: #1b1f3b; /* Granatowy */
     color: #ffffff;
     padding: 15px;
@@ -39,6 +38,7 @@ main {
     overflow-y: auto; /* Przewijanie w pionie */
 }
 
+/* Filtry - tytuł i selektory */
 .filters h3 {
     font-size: 1.3em;
     margin-bottom: 15px;
@@ -60,10 +60,9 @@ main {
     color: #333;
 }
 
-
 /* Główna treść */
 .content {
-    flex: 1;
+    flex: 1; /* Zajmuje resztę dostępnej przestrzeni */
 }
 
 /* Wyszukiwarka i sortowanie */
@@ -73,7 +72,7 @@ main {
     align-items: center;
     margin-bottom: 20px;
     gap: 10px;
-    flex-wrap: wrap; /* Pozwala na zawijanie */
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów */
 }
 
 .controls .search-bar {
@@ -149,14 +148,14 @@ footer {
 
 /* Media Queries - Responsywność */
 
-/* Dla tabletów i małych ekranów */
+/* Na tabletach i małych ekranach */
 @media (max-width: 1024px) {
     .car-item {
         flex: 0 0 calc(50% - 20px); /* 2 karty w rzędzie */
     }
 }
 
-/* Dla telefonów */
+/* Na telefonach */
 @media (max-width: 768px) {
     main {
         flex-direction: column; /* Filtry idą na górę */
@@ -164,7 +163,7 @@ footer {
 
     .filters {
         flex: 0 0 auto;
-        width: 100%;
+        width: 100%; /* Na telefonach filtry zajmują pełną szerokość */
         margin-bottom: 20px;
     }
 
@@ -175,12 +174,18 @@ footer {
     .car-item {
         flex: 0 0 100%; /* 1 karta na całą szerokość */
     }
-}
 
-@media (max-width: 480px) {
     .controls .search-bar,
     .controls select {
         width: 100%;
         margin-bottom: 10px;
+    }
+}
+
+/* Dla bardzo małych ekranów */
+@media (max-width: 480px) {
+    header .banner {
+        width: 100%; /* Zapewnia pełne dopasowanie */
+        height: auto;
     }
 }
