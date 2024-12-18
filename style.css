@@ -8,8 +8,14 @@ body {
 }
 
 /* Nagłówek */
+header .banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #007bff;
     /* Baner */
-    header .banner {
+header .banner {
     width: 100%; /* Rozciąga obraz na całą szerokość */
     height: auto; /* Dopasowuje wysokość do proporcji obrazu */
     display: block;
