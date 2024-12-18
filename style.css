@@ -8,12 +8,17 @@ body {
 }
 
 /* Nagłówek */
-header .banner {
-    width: 100%;
-    height: auto;
+    /* Baner */
+    header .banner {
+    width: 100%; /* Rozciąga obraz na całą szerokość */
+    height: auto; /* Dopasowuje wysokość do proporcji obrazu */
     display: block;
-    margin-bottom: 20px;
+    margin: 0; /* Usuń marginesy */
+    padding: 0; /* Usuń padding */
+    object-fit: cover; /* Utrzymuje proporcje obrazu */
     border-bottom: 5px solid #007bff;
+}
+
 }
 
 /* Główna sekcja */
