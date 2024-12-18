@@ -1,21 +1,30 @@
-/* Podstawowy styl */
+/* Uniwersalne resetowanie stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styl dla body */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ebedef; /* Jasnoszare tło */
-    color: #333; /* Standardowy kolor tekstu */
-    overflow-x: hidden; /* Zapobiega przewijaniu poziomemu */
+    background-color: #ebedef;
+    color: #333;
+    overflow-x: hidden;
 }
 
 /* Nagłówek i baner */
+header {
+    width: 100%;
+    overflow: hidden; /* Ukryj ewentualne nadmiary */
+}
+
 header .banner {
-    width: 100%; /* Rozciągnij na pełną szerokość ekranu */
+    width: 100%; /* Pełna szerokość */
     height: auto; /* Zachowaj proporcje obrazu */
     display: block;
-    margin: 0; /* Usuń marginesy */
-    padding: 0;
-    object-fit: cover; /* Wypełnia przestrzeń bez zniekształcenia */
 }
 
 /* Główna sekcja */
@@ -28,113 +37,18 @@ main {
 
 /* Filtry */
 .filters {
-    flex: 0 0 200px; /* Stała szerokość bloku filtrów na większych ekranach */
-    background-color: #1b1f3b; /* Granatowy */
+    flex: 0 0 200px;
+    background-color: #1b1f3b;
     color: #ffffff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    max-height: 300px; /* Maksymalna wysokość */
-    overflow-y: auto; /* Przewijanie w pionie */
+    max-height: 300px;
+    overflow-y: auto;
 }
 
-/* Filtry - tytuł i selektory */
-.filters h3 {
-    font-size: 1.3em;
-    margin-bottom: 15px;
-}
-
-.filters label {
-    font-size: 1em;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.filters select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-/* Główna treść */
+/* Treść */
 .content {
-    flex: 1; /* Zajmuje resztę dostępnej przestrzeni */
-}
-
-/* Wyszukiwarka i sortowanie */
-.controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 10px;
-    flex-wrap: wrap; /* Pozwala na zawijanie elementów */
-}
-
-.controls .search-bar {
     flex: 1;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-}
-
-/* Lista pojazdów */
-.car-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.car-item {
-    flex: 0 0 calc(33.333% - 20px); /* 3 karty w rzędzie na dużych ekranach */
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.car-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-}
-
-.car-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto 0;
-    background-color: #f4f4f4;
-}
-
-.car-details {
-    padding: 15px;
-    text-align: center;
-}
-
-.car-name {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #1b1f3b;
-}
-
-.car-price {
-    font-size: 1.2em;
-    color: #007bff;
-    margin-bottom: 5px;
-}
-
-.car-class,
-.car-type {
-    font-size: 1em;
-    color: #666;
 }
 
 /* Stopka */
@@ -142,50 +56,17 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #1b1f3b;
-    color: #f8f9fa;
-    border-top: 5px solid #007bff;
+    color: #ffffff;
 }
 
-/* Media Queries - Responsywność */
-
-/* Na tabletach i małych ekranach */
-@media (max-width: 1024px) {
-    .car-item {
-        flex: 0 0 calc(50% - 20px); /* 2 karty w rzędzie */
-    }
-}
-
-/* Na telefonach */
+/* Responsywność - poprawki na małych ekranach */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Filtry idą na górę */
+        flex-direction: column; /* Przenieś filtry na górę */
     }
 
     .filters {
-        flex: 0 0 auto;
-        width: 100%; /* Na telefonach filtry zajmują pełną szerokość */
-        margin-bottom: 20px;
-    }
-
-    .controls {
-        flex-direction: column;
-    }
-
-    .car-item {
-        flex: 0 0 100%; /* 1 karta na całą szerokość */
-    }
-
-    .controls .search-bar,
-    .controls select {
         width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-/* Dla bardzo małych ekranów */
-@media (max-width: 480px) {
-    header .banner {
-        width: 100%; /* Zapewnia pełne dopasowanie */
-        height: auto;
+        margin-bottom: 20px;
     }
 }
