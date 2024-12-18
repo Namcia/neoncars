@@ -10,21 +10,23 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ebedef; /* Jasnoszare tło */
-    color: #333; /* Kolor tekstu */
+    background-color: #0f172a; /* Ciemnoniebieskie tło */
+    color: #ffffff; /* Biały tekst */
     overflow-x: hidden; /* Zapobiega przewijaniu poziomemu */
 }
 
 /* Nagłówek i baner */
 header {
     width: 100%;
-    overflow: hidden; /* Ukryj nadmiary */
+    overflow: hidden;
 }
 
 header .banner {
-    width: 100%; /* Baner na całą szerokość */
-    height: auto; /* Zachowaj proporcje obrazu */
+    width: 100%;
+    height: auto;
     display: block;
+    filter: brightness(80%); /* Lekko przyciemnione dla kontrastu */
+    border-bottom: 5px solid #00f0ff; /* Neonowy akcent */
 }
 
 /* Główna sekcja */
@@ -37,40 +39,44 @@ main {
 
 /* Filtry */
 .filters {
-    flex: 0 0 200px; /* Szerokość na większych ekranach */
-    background-color: #1b1f3b; /* Granatowy */
-    color: #ffffff; /* Biały tekst */
+    flex: 0 0 200px;
+    background-color: #1e293b; /* Ciemniejszy odcień */
+    color: #00f0ff; /* Neonowy niebieski tekst */
     padding: 15px;
     border-radius: 8px;
-    max-height: 300px; /* Ograniczenie wysokości */
-    overflow-y: auto; /* Przewijanie w pionie */
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5); /* Neonowy efekt */
+    max-height: 300px;
+    overflow-y: auto;
 }
 
-/* Filtry - tytuł i pola */
 .filters h3 {
     font-size: 1.3em;
     margin-bottom: 15px;
+    color: #00ff85; /* Neonowy zielony */
+    text-shadow: 0 0 5px #00ff85;
 }
 
 .filters label {
     font-size: 1em;
     display: block;
     margin-bottom: 5px;
+    color: #ffffff;
 }
 
 .filters select {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #00f0ff;
     border-radius: 4px;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #0f172a;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
 }
 
 /* Główna treść */
 .content {
-    flex: 1; /* Zajmuje resztę dostępnej przestrzeni */
+    flex: 1;
 }
 
 /* Wyszukiwarka i sortowanie */
@@ -80,16 +86,18 @@ main {
     align-items: center;
     margin-bottom: 20px;
     gap: 10px;
-    flex-wrap: wrap; /* Pozwala na zawijanie elementów */
+    flex-wrap: wrap;
 }
 
 .controls .search-bar {
     flex: 1;
     padding: 10px;
     font-size: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid #00ff85;
     border-radius: 8px;
-    background-color: #f8f9fa;
+    background-color: #0f172a;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 255, 133, 0.3);
 }
 
 /* Lista pojazdów */
@@ -100,24 +108,24 @@ main {
 }
 
 .car-item {
-    flex: 0 0 calc(33.333% - 20px); /* 3 karty w rzędzie na dużych ekranach */
-    background-color: #ffffff;
+    flex: 0 0 calc(33.333% - 20px);
+    background-color: #1e293b;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .car-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
 }
 
 .car-item img {
     width: 100%;
     height: auto;
     display: block;
-    background-color: #f4f4f4;
+    background-color: #0f172a;
 }
 
 .car-details {
@@ -129,47 +137,50 @@ main {
     font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #1b1f3b;
+    color: #00f0ff;
+    text-shadow: 0 0 5px #00f0ff;
 }
 
 .car-price {
     font-size: 1.2em;
-    color: #007bff;
+    color: #ff007b;
     margin-bottom: 5px;
+    text-shadow: 0 0 5px #ff007b;
 }
 
 .car-class,
 .car-type {
     font-size: 1em;
-    color: #666;
+    color: #ffffff;
 }
 
 /* Stopka */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #1b1f3b;
-    color: #f8f9fa;
-    border-top: 5px solid #007bff;
+    background-color: #1e293b;
+    color: #00f0ff;
+    border-top: 5px solid #00ff85;
+    text-shadow: 0 0 5px #00f0ff;
 }
 
-/* Responsywność - poprawki na małych ekranach */
+/* Responsywność */
 
 /* Na tabletach */
 @media (max-width: 1024px) {
     .car-item {
-        flex: 0 0 calc(50% - 20px); /* 2 karty w rzędzie */
+        flex: 0 0 calc(50% - 20px);
     }
 }
 
 /* Na telefonach */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Przenieś filtry na górę */
+        flex-direction: column;
     }
 
     .filters {
-        width: 100%; /* Na telefonach filtry zajmują pełną szerokość */
+        width: 100%;
         margin-bottom: 20px;
     }
 
@@ -178,7 +189,7 @@ footer {
     }
 
     .car-item {
-        flex: 0 0 calc(50% - 10px); /* 2 karty w rzędzie na małych ekranach */
+        flex: 0 0 calc(50% - 10px);
     }
 
     .controls .search-bar,
@@ -191,11 +202,11 @@ footer {
 /* Dla bardzo małych ekranów */
 @media (max-width: 480px) {
     header .banner {
-        width: 100%; /* Zapewnia pełne dopasowanie */
+        width: 100%;
         height: auto;
     }
 
     .car-item {
-        flex: 0 0 calc(50% - 10px); /* Nadal 2 karty w rzędzie */
+        flex: 0 0 calc(50% - 10px);
     }
 }
