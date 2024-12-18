@@ -26,7 +26,7 @@ header .banner {
     height: auto;
     display: block;
     filter: brightness(80%); /* Lekko przyciemnione dla kontrastu */
-    border-bottom: 5px solid #00f0ff; /* Neonowy akcent */
+    border-bottom: 5px solid #ff007b; /* Neonowy różowy akcent */
 }
 
 /* Główna sekcja */
@@ -41,10 +41,10 @@ main {
 .filters {
     flex: 0 0 200px;
     background-color: #1e293b; /* Ciemniejszy odcień */
-    color: #00f0ff; /* Neonowy niebieski tekst */
+    color: #ff007b; /* Neonowy różowy tekst */
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5); /* Neonowy efekt */
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.5); /* Neonowy efekt */
     max-height: 300px;
     overflow-y: auto;
 }
@@ -52,8 +52,8 @@ main {
 .filters h3 {
     font-size: 1.3em;
     margin-bottom: 15px;
-    color: #00ff85; /* Neonowy zielony */
-    text-shadow: 0 0 5px #00ff85;
+    color: #ff007b; /* Neonowy różowy */
+    text-shadow: 0 0 5px #ff007b;
 }
 
 .filters label {
@@ -67,11 +67,11 @@ main {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
-    border: 1px solid #00f0ff;
+    border: 1px solid #ff007b;
     border-radius: 4px;
     background-color: #0f172a;
     color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.3);
 }
 
 /* Główna treść */
@@ -93,11 +93,11 @@ main {
     flex: 1;
     padding: 10px;
     font-size: 1em;
-    border: 1px solid #00ff85;
+    border: 1px solid #ff007b;
     border-radius: 8px;
     background-color: #0f172a;
     color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 255, 133, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.3);
 }
 
 /* Lista pojazdów */
@@ -111,14 +111,14 @@ main {
     flex: 0 0 calc(33.333% - 20px);
     background-color: #1e293b;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.3);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .car-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+    box-shadow: 0 0 25px rgba(255, 0, 123, 0.5);
 }
 
 .car-item img {
@@ -137,15 +137,15 @@ main {
     font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #00f0ff;
-    text-shadow: 0 0 5px #00f0ff;
+    color: #ff007b;
+    text-shadow: 0 0 5px #ff007b;
 }
 
 .car-price {
     font-size: 1.2em;
-    color: #ff007b;
+    color: #00f0ff;
     margin-bottom: 5px;
-    text-shadow: 0 0 5px #ff007b;
+    text-shadow: 0 0 5px #00f0ff;
 }
 
 .car-class,
@@ -159,9 +159,9 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #1e293b;
-    color: #00f0ff;
-    border-top: 5px solid #00ff85;
-    text-shadow: 0 0 5px #00f0ff;
+    color: #ff007b;
+    border-top: 5px solid #00f0ff;
+    text-shadow: 0 0 5px #ff007b;
 }
 
 /* Responsywność */
