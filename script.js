@@ -1,5 +1,5 @@
 const cars = [
-    { name: "Obey 9F", price: 120000, class: "S", type: "Sport" },
+    { name: "Obey 9F", price: 120000, class: "S", type: "Super" },
     { name: "BF Injection", price: 45000, class: "B", type: "Off-road" },
     { name: "Dubsta 6x6", price: 180000, class: "A", type: "Off-road" },
     { name: "Entity MT", price: 1000000, class: "S", type: "Super" },
