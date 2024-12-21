@@ -37,25 +37,25 @@ function displayCars(carsToDisplay) {
 function filterCars() {
     let filteredCars = cars;
 
-    // Filtrowanie według klasy
+    
     const selectedClass = classFilter.value;
     if (selectedClass !== "all") {
         filteredCars = filteredCars.filter(car => car.class === selectedClass);
     }
 
-    // Filtrowanie według typu pojazdu
+    
     const selectedType = typeFilter.value;
     if (selectedType !== "all") {
         filteredCars = filteredCars.filter(car => car.type === selectedType);
     }
 
-    // Wyszukiwanie po nazwie
+    
     const searchQuery = searchBar.value.toLowerCase();
     if (searchQuery) {
         filteredCars = filteredCars.filter(car => car.name.toLowerCase().includes(searchQuery));
     }
 
-    // Sortowanie
+    
     if (sortOrder.value === "asc") {
         filteredCars.sort((a, b) => a.price - b.price);
     } else {
@@ -65,11 +65,11 @@ function filterCars() {
     displayCars(filteredCars);
 }
 
-// Dodanie obsługi nowych filtrów
+
 classFilter.addEventListener("change", filterCars);
 typeFilter.addEventListener("change", filterCars);
 searchBar.addEventListener("input", filterCars);
 sortOrder.addEventListener("change", filterCars);
 
-// Wyświetlenie samochodów przy załadowaniu
+
 displayCars(cars);
