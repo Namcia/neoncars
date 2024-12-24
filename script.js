@@ -1,13 +1,13 @@
 const cars = [
-    { name: "Obey 9F", price: 120000, class: "S", type: "Super" },
-    { name: "BF Injection", price: 45000, class: "B", type: "Off-road" },
-    { name: "Dubsta 6x6", price: 180000, class: "A", type: "Off-road" },
-    { name: "Entity MT", price: 1000000, class: "S", type: "Super" },
-    { name: "10F", price: 1800000, class: "S", type: "Super" },
-    { name: "Poszerzony 10F", price: 2000000, class: "S", type: "Super" },
-    { name: "z190", price: 50000, class: "C", type: "Sport" },
-    { name: "Surge", price: 35000, class: "EL", type: "Electric" },
-    { name: "Bati", price: 100000, class: "M", type: "Motocykle" },
+    { name: "Obey 9F", salePrice: 120000, listPrice: 150000, class: "S", type: "Super" },
+    { name: "BF Injection", salePrice: 45000, listPrice: 60000, class: "B", type: "Off-road" },
+    { name: "Dubsta 6x6", salePrice: 180000, listPrice: 220000, class: "A", type: "Off-road" },
+    { name: "Entity MT", salePrice: 1000000, listPrice: 1250000, class: "S", type: "Super" },
+    { name: "10F", salePrice: 1800000, listPrice: 2000000, class: "S", type: "Super" },
+    { name: "Poszerzony 10F", salePrice: 2000000, listPrice: 2200000, class: "S", type: "Super" },
+    { name: "z190", salePrice: 50000, listPrice: 65000, class: "C", type: "Sport" },
+    { name: "Surge", salePrice: 35000, listPrice: 45000, class: "EL", type: "Electric" },
+    { name: "Bati", salePrice: 100000, listPrice: 125000, class: "M", type: "Motocykle" },
 ];
 
 const carList = document.getElementById("carList");
@@ -25,7 +25,8 @@ function displayCars(carsToDisplay) {
             <img src="images/${car.name.toLowerCase().replace(/ /g, "")}.png" alt="${car.name}">
             <div class="car-details">
                 <div class="car-name">${car.name}</div>
-                <div class="car-price">${car.price.toLocaleString()} $</div>
+                <div class="car-sale-price">Cena sprzedaży: ${car.salePrice.toLocaleString()} $</div>
+                <div class="car-list-price">Cena katalogowa: ${car.listPrice.toLocaleString()} $</div>
                 <div class="car-class">Klasa: ${car.class}</div>
                 <div class="car-type">Typ: ${car.type}</div>
             </div>
@@ -37,39 +38,33 @@ function displayCars(carsToDisplay) {
 function filterCars() {
     let filteredCars = cars;
 
-    
     const selectedClass = classFilter.value;
     if (selectedClass !== "all") {
         filteredCars = filteredCars.filter(car => car.class === selectedClass);
     }
 
-    
     const selectedType = typeFilter.value;
     if (selectedType !== "all") {
         filteredCars = filteredCars.filter(car => car.type === selectedType);
     }
 
-    
     const searchQuery = searchBar.value.toLowerCase();
     if (searchQuery) {
         filteredCars = filteredCars.filter(car => car.name.toLowerCase().includes(searchQuery));
     }
 
-    
     if (sortOrder.value === "asc") {
-        filteredCars.sort((a, b) => a.price - b.price);
+        filteredCars.sort((a, b) => a.salePrice - b.salePrice);
     } else {
-        filteredCars.sort((a, b) => b.price - a.price);
+        filteredCars.sort((a, b) => b.salePrice - a.salePrice);
     }
 
     displayCars(filteredCars);
 }
 
-
 classFilter.addEventListener("change", filterCars);
 typeFilter.addEventListener("change", filterCars);
 searchBar.addEventListener("input", filterCars);
 sortOrder.addEventListener("change", filterCars);
-
 
 displayCars(cars);
