@@ -5,7 +5,7 @@ const cars = [
     { name: "Entity MT", salePrice: 1990000, listPrice: 2117500, class: "S", type: "Super" },
     { name: "10F", salePrice: 1600000, listPrice: 1800000, class: "S", type: "Super" },
     { name: "Poszerzony 10F", salePrice: 2000000, listPrice: 2220000, class: "S", type: "Super" },
-    { name: "z190", salePrice: 400000, listPrice: 280000, class: "C", type: "Sport" },
+    { name: "z190", salePrice: 160000, listPrice: 280000, class: "C", type: "Sport" },
     { name: "Surge", salePrice: 155000, listPrice: 175000, class: "EL", type: "Electric" },
     { name: "Bati 801", salePrice: 625000, listPrice: 715000, class: "M", type: "Motocykle" },
 ];
