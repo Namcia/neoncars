@@ -157,14 +157,14 @@ main {
 .car-sale-price {
     font-size: 1em;
     margin: 5px 0;
-    color: #ff007b; /* Neonowy różowy */
+    color: #00f0ff; 
     text-shadow: 0 0 5px #ff007b;
 }
 
 .car-list-price {
     font-size: 1em;
     margin: 5px 0;
-    color: #00f0ff; /* Neonowy niebieski */
+    color: #ff007b; 
     text-shadow: 0 0 5px #00f0ff;
 }
 
