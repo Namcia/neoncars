@@ -2,7 +2,7 @@ const cars = [
     { name: "Obey 9F", salePrice: 1400000, listPrice: 1750000, class: "S", type: "Super" },
     { name: "BF Injection", salePrice: 45000, listPrice: 60000, class: "O", type: "Off-road" },
     { name: "Dubsta 6x6", salePrice: 500000, listPrice: 625000, class: "O", type: "Off-road" },
-    { name: "Entity MT", salePrice: 1000000, listPrice: 2117500, class: "S", type: "Super" },
+    { name: "Entity MT", salePrice: 1990000, listPrice: 2117500, class: "S", type: "Super" },
     { name: "10F", salePrice: 1600000, listPrice: 1800000, class: "S", type: "Super" },
     { name: "Poszerzony 10F", salePrice: 2000000, listPrice: 2220000, class: "S", type: "Super" },
     { name: "z190", salePrice: 400000, listPrice: 280000, class: "C", type: "Sport" },
