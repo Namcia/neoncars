@@ -171,32 +171,31 @@ main {
 
 footer {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    padding: 10px;
+    flex-direction: column; /* Ustawienie elementów w kolumnie */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    padding: 20px;
     background-color: #1e293b;
     color: #ff007b;
     border-top: 5px solid #00f0ff;
     text-shadow: 0 0 5px #ff007b;
-    position: relative; 
+    text-align: center; /* Wyśrodkowanie tekstu */
+    position: relative; /* Ustawienie względne dla logo */
 }
 
 footer .footer-text {
-    text-align: center;
-    margin: 0;
+    line-height: 1.8; /* Dystans między liniami tekstu */
+    margin-bottom: 10px; /* Odstęp od logo Discorda */
     font-size: 0.9em;
     color: #ff007b;
 }
 
 footer .discord-link {
     position: absolute;
-    right: 10px; 
+    right: 10px; /* Odstęp od prawej krawędzi */
+    top: 50%; /* Pozycjonowanie na środku w pionie */
+    transform: translateY(-50%); /* Korekcja wyrównania */
     text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-footer .discord-link:hover {
-    transform: scale(1.1);
 }
 
 footer .discord-logo {
@@ -205,8 +204,6 @@ footer .discord-logo {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
-
 
 
 
