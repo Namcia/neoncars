@@ -170,18 +170,24 @@ main {
 
 
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Ustawia elementy w jednej linii z przestrzenią między nimi */
+    align-items: center; /* Wyrównuje elementy w pionie */
     padding: 10px;
     background-color: #1e293b;
     color: #ff007b;
     border-top: 5px solid #00f0ff;
     text-shadow: 0 0 5px #ff007b;
-    position: relative;
+}
+
+footer .footer-text {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ff007b;
 }
 
 footer .discord-link {
     display: inline-block;
-    margin-top: 10px;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
@@ -196,6 +202,7 @@ footer .discord-logo {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+
 
 
 
