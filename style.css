@@ -176,6 +176,25 @@ footer {
     color: #ff007b;
     border-top: 5px solid #00f0ff;
     text-shadow: 0 0 5px #ff007b;
+    position: relative;
+}
+
+footer .discord-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+footer .discord-link:hover {
+    transform: scale(1.1);
+}
+
+footer .discord-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 
