@@ -45,7 +45,7 @@ main {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(255, 0, 123, 0.5); 
-    max-height: 300px;
+    max-height: 400px; /* Zwiększono z 300px */
     overflow-y: auto;
 }
 
