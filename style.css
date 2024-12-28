@@ -1,20 +1,17 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0f172a; 
-    color: #ffffff; 
-    overflow-x: hidden; 
+    background-color: #0f172a;
+    color: #ffffff;
+    overflow-x: hidden;
 }
-
 
 header {
     width: 100%;
@@ -25,10 +22,9 @@ header .banner {
     width: 100%;
     height: auto;
     display: block;
-    filter: brightness(80%); 
-    border-bottom: 5px solid #ff007b; 
+    filter: brightness(80%);
+    border-bottom: 5px solid #ff007b;
 }
-
 
 main {
     display: flex;
@@ -37,14 +33,13 @@ main {
     padding: 20px;
 }
 
-
 .filters {
     flex: 0 0 200px;
-    background-color: #1e293b; 
-    color: #ff007b; 
+    background-color: #1e293b;
+    color: #ff007b;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(255, 0, 123, 0.5); 
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.5);
     max-height: 300px;
     overflow-y: auto;
 }
@@ -52,7 +47,7 @@ main {
 .filters h3 {
     font-size: 1.3em;
     margin-bottom: 15px;
-    color: #ff007b; 
+    color: #ff007b;
     text-shadow: 0 0 5px #ff007b;
 }
 
@@ -74,11 +69,9 @@ main {
     box-shadow: 0 0 10px rgba(255, 0, 123, 0.3);
 }
 
-
 .content {
     flex: 1;
 }
-
 
 .controls {
     display: flex;
@@ -99,7 +92,6 @@ main {
     color: #ffffff;
     box-shadow: 0 0 10px rgba(255, 0, 123, 0.3);
 }
-
 
 .car-list {
     display: flex;
@@ -154,47 +146,32 @@ main {
     color: #ffffff;
 }
 
-.car-sale-price {
-    font-size: 1em;
-    margin: 5px 0;
-    color: #00f0ff; 
-    text-shadow: 0 0 5px #00f0ff;
-}
-
-.car-list-price {
-    font-size: 1em;
-    margin: 5px 0;
-    color: #ff007b; 
-    text-shadow: 0 0 5px #ff007b;
-}
-
-
 footer {
     display: flex;
-    flex-direction: column; /* Ustawienie elementów w kolumnie */
-    justify-content: center; /* Wyśrodkowanie w pionie */
-    align-items: center; /* Wyśrodkowanie w poziomie */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background-color: #1e293b;
     color: #ff007b;
     border-top: 5px solid #00f0ff;
     text-shadow: 0 0 5px #ff007b;
-    text-align: center; /* Wyśrodkowanie tekstu */
-    position: relative; /* Ustawienie względne dla logo */
+    text-align: center;
+    position: relative;
 }
 
 footer .footer-text {
-    line-height: 1.8; /* Dystans między liniami tekstu */
-    margin-bottom: 10px; /* Odstęp od logo Discorda */
+    line-height: 1.8;
+    margin-bottom: 10px;
     font-size: 0.9em;
     color: #ff007b;
 }
 
 footer .discord-link {
     position: absolute;
-    right: 10px; /* Odstęp od prawej krawędzi */
-    top: 50%; /* Pozycjonowanie na środku w pionie */
-    transform: translateY(-50%); /* Korekcja wyrównania */
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     text-decoration: none;
 }
 
@@ -205,15 +182,11 @@ footer .discord-logo {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-
-
-
 @media (max-width: 1024px) {
     .car-item {
         flex: 0 0 calc(50% - 20px);
     }
 }
-
 
 @media (max-width: 768px) {
     main {
@@ -238,8 +211,27 @@ footer .discord-logo {
         width: 100%;
         margin-bottom: 10px;
     }
-}
 
+    footer {
+        padding: 15px;
+    }
+
+    footer .footer-text {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+    }
+
+    footer .discord-link {
+        position: static;
+        margin-top: 10px;
+        transform: none;
+    }
+
+    footer .discord-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
 
 @media (max-width: 480px) {
     header .banner {
