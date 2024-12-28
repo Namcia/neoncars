@@ -190,20 +190,37 @@ footer .footer-text {
     color: #ff007b;
 }
 
-footer .discord-link {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+.filters .discord-invite {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.filters .discord-invite a {
     text-decoration: none;
 }
 
-footer .discord-logo {
-    width: 50px;
-    height: 50px;
+.filters .discord-invite .discord-logo {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.filters .discord-invite .discord-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.filters .discord-invite p {
+    font-size: 1em;
+    color: #ff007b;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(255, 0, 123, 0.5);
+}
+
 
 
 
@@ -248,16 +265,6 @@ footer .discord-logo {
         margin-bottom: 5px;
     }
 
-    footer .discord-link {
-        position: static; /* Usuń pozycjonowanie absolutne */
-        margin-top: 10px; /* Dodaj odstęp od tekstu */
-        transform: none; /* Usuń przesunięcie */
-    }
-
-    footer .discord-logo {
-        width: 40px; /* Zmniejsz rozmiar logo */
-        height: 40px;
-    }
 }
 
 
