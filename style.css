@@ -133,11 +133,18 @@ main {
     text-shadow: 0 0 5px #ff007b;
 }
 
-.car-price {
+.car-price-sale {
     font-size: 1.2em;
     color: #00f0ff;
     margin-bottom: 5px;
     text-shadow: 0 0 5px #00f0ff;
+}
+
+.car-price-catalog {
+    font-size: 1.2em;
+    color: #ff3333;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #ff3333;
 }
 
 .car-class,
