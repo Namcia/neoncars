@@ -171,30 +171,30 @@ main {
 
 footer {
     display: flex;
-    flex-direction: column; /* Ustawienie elementów w kolumnie */
-    justify-content: center; /* Wyśrodkowanie w pionie */
-    align-items: center; /* Wyśrodkowanie w poziomie */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background-color: #1e293b;
     color: #ff007b;
     border-top: 5px solid #00f0ff;
     text-shadow: 0 0 5px #ff007b;
-    text-align: center; /* Wyśrodkowanie tekstu */
-    position: relative; /* Ustawienie względne dla logo */
+    text-align: center;
+    position: relative;
 }
 
 footer .footer-text {
-    line-height: 1.8; /* Dystans między liniami tekstu */
-    margin-bottom: 10px; /* Odstęp od logo Discorda */
+    line-height: 1.8;
+    margin-bottom: 10px;
     font-size: 0.9em;
     color: #ff007b;
 }
 
 footer .discord-link {
     position: absolute;
-    right: 10px; /* Odstęp od prawej krawędzi */
-    top: 50%; /* Pozycjonowanie na środku w pionie */
-    transform: translateY(-50%); /* Korekcja wyrównania */
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     text-decoration: none;
 }
 
@@ -237,6 +237,26 @@ footer .discord-logo {
     .controls select {
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    footer {
+        padding: 15px; /* Mniejsze odstępy */
+    }
+
+    footer .footer-text {
+        font-size: 0.8em; /* Zmniejszenie czcionki */
+        margin-bottom: 5px;
+    }
+
+    footer .discord-link {
+        position: static; /* Usuń pozycjonowanie absolutne */
+        margin-top: 10px; /* Dodaj odstęp od tekstu */
+        transform: none; /* Usuń przesunięcie */
+    }
+
+    footer .discord-logo {
+        width: 40px; /* Zmniejsz rozmiar logo */
+        height: 40px;
     }
 }
 
