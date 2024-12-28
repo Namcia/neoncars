@@ -201,17 +201,17 @@ footer .footer-text {
 }
 
 .filters .discord-invite .discord-logo {
-    width: 80px;
-    height: 80px;
+    width: 50px; /* Zmniejszono z 80px */
+    height: 50px; /* Zmniejszono z 80px */
     border-radius: 50%;
     margin-bottom: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Dostosowano wielkość cienia */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .filters .discord-invite .discord-logo:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Dostosowano efekt na hover */
 }
 
 .filters .discord-invite p {
